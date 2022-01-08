@@ -10,7 +10,7 @@ const addTodo =todo =>{
     }
     const newTodos  =[todo ,...todos]
     setTodos(newTodos)
-    console.log(...todos);
+    // console.log(...todos);
 }
   return (
     <div>
