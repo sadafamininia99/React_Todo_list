@@ -5,23 +5,21 @@ function TodoForm(props) {
 
   const handleChange = (e) => {
     setInput(e.target.value);
-    //get input value  
+    //get input value
   };
 
   //i dont want page refreshed :/
   // so
   const handleSubmit = (e) => {
     e.preventDefault();
-    //
-    // props.onSubmit({
-    // id: Math.floor(Math.random()*10000),
-    // text :input
-    //
-    // })
 
+    props.onSubmit({
+      id: Math.floor(Math.random() * 10000),
+      text: input
+    });
 
-    setInput('');
- };
+    setInput("");
+  };
 
   return (
     <form className="todo-form" onSubmit={handleSubmit}>
